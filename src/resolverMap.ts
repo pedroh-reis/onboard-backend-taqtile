@@ -8,3 +8,4 @@ import {IResolvers} from "@graphql-tools/utils"
  }
 
  export default resolverMap
+ 
