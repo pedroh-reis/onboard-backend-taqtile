@@ -17,7 +17,10 @@ The list of tools is:
 
 - VS Code
 - GitHub
+- Postgres
+- typeORM
 
 # Steps to run and debug:
-
-TODO
+## Run
+- docker-compose up -d
+- npm start
