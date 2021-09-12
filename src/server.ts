@@ -13,9 +13,11 @@ async function startExpressApolloServer() {
         validationRules: [depthLimit(7)]
     })
 
-    app.use(cors({
-        origin: "*"
-    }))
+    app.use(
+        cors({
+            origin: "*"
+        })
+    )
     app.use(compression())
     await server.start()
     server.applyMiddleware({
@@ -25,10 +27,7 @@ async function startExpressApolloServer() {
 
     const httpServer = createServer(app)
 
-    httpServer.listen(
-        {port: 3000},
-        (): void => console.log("GraphQL is now running on http://localhost:3000/graphql")
-    )
+    httpServer.listen({port: 3000}, (): void => console.log("GraphQL is now running on http://localhost:3000/graphql"))
 }
 
 startExpressApolloServer()
